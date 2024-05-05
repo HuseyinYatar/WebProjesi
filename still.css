@@ -1,0 +1,47 @@
+.ayrac
+{
+margin-left: 20px;
+margin-right: 20px;
+}
+
+
+/*Arka Plan Resmi Ayarlama*/
+
+.ust-kisim{
+   background-color: rgb(191, 224, 245);
+    width: 100%;
+   height:100vh; 
+   font-family: "Josefin Sans", sans-serif;
+}
+
+.arka-plan
+{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+   height:100vh; 
+}
+
+
+
+
+
+
+/*NavBardaki Linkler*/
+.nav-item a{
+color: blue;
+font-size: 20px;
+}
+
+
+
+
+
+
+
+
+a.İlceler
+{
+  color: white;
+  text-decoration-line: none;
+  font-weight: bold;
+}
