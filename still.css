@@ -4,22 +4,23 @@ margin-left: 20px;
 margin-right: 20px;
 }
 
-
+* {
+   margin: 0;
+   padding: 0;
+}
 /*Arka Plan Resmi Ayarlama*/
-
+body {
+   margin:0;
+ }
+ 
 .ust-kisim{
    background-color: rgb(191, 224, 245);
     width: 100%;
    height:100vh; 
    font-family: "Josefin Sans", sans-serif;
    display: block;
-}
-
-.arka-plan
-{
-    background-color: rgb(255, 255, 255);
-    width: 50%;
-   height:100vh; 
+   margin: 0;
+   padding: 0;
 }
 
 
@@ -34,15 +35,26 @@ font-size: 20px;
 }
 
 
-
-
-
-
-
-
 a.İlceler
 {
   color: white;
   text-decoration-line: none;
   font-weight: bold;
 }
+
+/*Özgeçmişteki barlar için*/
+li.OzGecmis
+{
+  background-color: rgb(85, 216, 239);
+  
+}
+/*Özgeçmişteki Linkler İçin*/
+ul li a{
+   text-decoration-line: none;
+   color: white;
+}
+ul li a:hover{
+   text-decoration-line: none;
+   color: white;
+}
+
