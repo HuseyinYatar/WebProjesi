@@ -31,7 +31,6 @@ body {
 
 .navbar-brand:hover .hakkinda-link {
    font-weight: bold
-   
 }
 
 /*NavBardaki Linkler*/
@@ -57,7 +56,7 @@ li.OzGecmis {
 ul li a {
    text-decoration-line: none;
    color: white;
-   
+
 }
 
 ul li a:hover {
@@ -106,26 +105,47 @@ ul li a:hover {
 
 
 .Girisyap {
- 
+
    margin-top: 200px;
    width: 24%;
    padding: 50px;
-border-radius: 25px;
-background-color:rgb(92, 137, 219);
-font-family: "Josefin Sans", sans-serif;
-font-weight: bolder;
-color:white;
+   border-radius: 25px;
+   background-color: rgb(92, 137, 219);
+   font-family: "Josefin Sans", sans-serif;
+   font-weight: bolder;
+   color: white;
 }
 
 
 
 
 
-.GirisyapButton
-{
-  width: 100%;
+.GirisyapButton {
+   width: 100%;
    transition: background-color 1s ease;
 }
-.GirisyapButton:hover{
-   color:white;
+
+.GirisyapButton:hover {
+   color: white;
+}
+
+
+
+/*İletisim Formu Stilleri*/
+
+.Formsinifi {
+   display: flex;
+
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(92, 137, 219);
+   width: 50%;
+   margin-left: 25%;
+   margin-top: 4%;
+   border-radius: 25px;
+}
+.FormUyeleri
+{
+   display: flex;
 }
