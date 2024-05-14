@@ -133,19 +133,20 @@ ul li a:hover {
 
 /*İletisim Formu Stilleri*/
 
-.Formsinifi {
-   display: flex;
-
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   background-color: rgb(92, 137, 219);
-   width: 50%;
-   margin-left: 25%;
-   margin-top: 4%;
-   border-radius: 25px;
+.İletisim label {
+   font-size: 25px;
+   font-weight: 400;
 }
-.FormUyeleri
-{
-   display: flex;
+
+.İletisim button{
+   transition: background-color 1s ease;
+   color: black;
+   width: 50%;
+   border-radius: 20px;
+}
+.İletisim button:hover{
+   color: white;
+}
+.İletisim .container {
+   font-weight: 900;
 }
