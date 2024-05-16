@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="still.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="still.css">
+
+    <style>
+        body {
+            background-color: rgb(191, 224, 245);
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light   " style="background-color: #e3f2fd;">
+        <div class="container ">
+            <a class="navbar-brand" href="index.html">
+                <img src="Görseller/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                <span class="hakkinda-link">Hakkımda</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item d-flex align-items-center ">
+                        <a class="nav-link ml-3" target="_blank" href="Sehirim.html"><i
+                                class="fa-solid fa-city"></i>Şehrim <span class="sr-only">(current)</span></a>
+
+                    </li>
+                    <li class="nav-item d-flex align-items-center ">
+                        <a class="nav-link ml-3" target="_blank" href="OzGecmis.html"><i
+                                class="fa-solid fa-scroll"></i>Öz Geçmiş <span class="sr-only">(current)</span></a>
+
+                    </li>
+                    <li class="nav-item d-flex align-items-center ">
+                        <a class="nav-link ml-3" target="_blank" href="Mirasımız.html"><i
+                                class="fa-solid fa-users"></i>Mirasımız <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center ">
+                        <a class="nav-link ml-3" target="_blank" href="iletisim.html">
+                            <i class="fa-solid fa-circle-info"></i><img src="" alt=""> <span
+                                class="sr-only">(current)</span>İletişim</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <a href="Giris.html" class="btn btn-lg btn-outline-warning my-smy-2 ml-5"
+                        style=" transition: background-color 1s ease;">Giriş Yap</a>
+                </form>
+
+            </div>
+    </nav>
+    <div class="container iletisim_js_Container ">
+        <div class="row mt-5">
+            <div class="col-md-7 mx-auto">
+                <h3 class="display-3 text-center ">İletisim Bilgileri</h3>
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <label for="" id="">Ad Soyad:</label>
+                    </div>
+                    <div class="col-md-9"> <label id="Ad_SoyAd"></label></div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <label for="" id="">Email:</label>
+                    </div>
+                    <div class="col-md-9"> <label id="Email"></label></div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <label for="">Konum:</label>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <label for="" id="Konum_Il">İl:</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <label for="" id="Konum_Ilce">İlçe:</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <label for="" id="Konum_Sokak">Sokak:</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <label for="" id="Konum_Mahalle">Mahalle:</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <label for="" id="">Doğum Günü:</label>
+                    </div>
+                    <div class="col-md-9"> <label id="DogumGunu"></label></div>
+                </div>
+
+
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <label for="" id="">Cinsiyet:</label>
+                    </div>
+                    <div class="col-md-9"> <label id="Cinsiyet"></label></div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <label for="" id="">Hobileri:</label>
+                    </div>
+                    <div class="col-md-9"> <label id="Hobiler"></label></div>
+                </div>
+
+
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <label for="" id="">Hakkında:</label>
+                    </div>
+                    <div class="col-md-9"> <label id="Hakkında"></label></div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+     
+var Ad_SoyAd = localStorage.getItem("Ad_SoyAd");
+var Email = localStorage.getItem("Email");
+var Konum_Il = localStorage.getItem("Konum_Il");
+var Konum_Ilce = localStorage.getItem("Konum_Ilce");
+var Konum_Sokak = localStorage.getItem("Konum_Sokak");
+var Konum_Mahalle = localStorage.getItem("Konum_Mahalle");
+var Hobiler = JSON.parse(localStorage.getItem("Hobiler") || "[]");
+var Cinsiyet = localStorage.getItem("Cinsiyet");
+var Gun = localStorage.getItem("Gun");
+var Ay = localStorage.getItem("Ay");
+var Yıl = localStorage.getItem("Yıl");
+var Hakkında = localStorage.getItem("Hakkında");
+
+
+// Veriyi label elementlerine yazdır
+document.getElementById("Hakkında").textContent = Hakkında;
+document.getElementById("Ad_SoyAd").textContent = Ad_SoyAd;
+document.getElementById("Email").textContent = Email;
+document.getElementById("Konum_Il").textContent = "İl: " + Konum_Il;
+document.getElementById("Konum_Ilce").textContent = "İlçe: " + Konum_Ilce;
+document.getElementById("Konum_Sokak").textContent = "Sokak: " + Konum_Sokak;
+document.getElementById("Konum_Mahalle").textContent = "Mahalle: " + Konum_Mahalle;
+document.getElementById("Hobiler").textContent = Hobiler.join(", ");
+document.getElementById("Cinsiyet").textContent = Cinsiyet;
+document.getElementById("DogumGunu").textContent = Gun+" . "+Ay+" . "+Yıl;
+
+
+
+// İşlem bittiğinde veriyi temizle (isteğe bağlı)
+localStorage.removeItem("Ad_SoyAd");
+localStorage.removeItem("Email");
+localStorage.removeItem("Konum_Il");
+localStorage.removeItem("Konum_Ilce");
+localStorage.removeItem("Konum_Sokak");
+localStorage.removeItem("Konum_Mahalle");
+localStorage.removeItem("Hobiler");
+localStorage.removeItem("Cinsiyet");
+localStorage.removeItem("Gun");
+localStorage.removeItem("Ay");
+localStorage.removeItem("Yıl");
+localStorage.removeItem("Hakkında");
+
+
+
+
+
+        src = "iletisim.js"
+    </script>
+</body>
+
+</html>
