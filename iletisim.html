@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>İletişim</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="still.css">
+    <link rel="shortcut icon" href="Icons/İletişim.png" type="image/x-icon">
     <style>
         body {
             background-color: rgb(191, 224, 245);
@@ -19,7 +20,7 @@
 
 
 <body>
-  
+
 
 
     <nav class="navbar navbar-expand-lg navbar-light   " style="background-color: #e3f2fd;">
@@ -54,11 +55,16 @@
                             <i class="fa-solid fa-circle-info"></i><img src="" alt=""> <span
                                 class="sr-only">(current)</span>İletişim</a>
                     </li>
+                    <li class="nav-item d-flex align-items-center ">
+                        <a class="nav-link ml-3" target="_blank" href="İlgi_Alanlarım.html">
+                            <i class="fa-solid fa-dumbbell"></i><span
+                                class="sr-only">(current)</span>İlgi Alanım</a>
+                    </li>
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0">
-                    <a href="Giris.html" class="btn btn-lg btn-outline-warning my-smy-2 ml-5"
-                        style=" transition: background-color 1s ease;">Giriş Yap</a>
+                    <a href="Giris.html" class="NavbarButon btn btn-lg btn-outline-warning my-smy-2 ml-5"
+                        >Giriş Yap</a>
                 </form>
 
             </div>
@@ -168,36 +174,40 @@
                         </div>
 
                         <div class="row mt-3">
-                            <div class="col-md-3"><label for="Textarea">Hakkında:</label></div>
-                            <div class="col-md-9">
-                                <textarea id="Hakkında" v-model="formData.Hakkinda" name="Textarea" rows="5"
-                                    cols="50"></textarea>
+                            <div class="col-md-3 col-12">
+                                <label for="Hakkında">Hakkında:</label>
+                            </div>
+                            <div class="col-md-9 col-12">
+                                <textarea style="display: inline-block;" id="Hakkında" v-model="formData.Hakkinda" name="Textarea" rows="5" cols="50"></textarea>
                             </div>
                         </div>
 
-                        <div class="row mt-5 mb-3 text-center">
-                            <div class="col-md-12">
-                                <div class="container btn btn-outline-light text-dark "
-                                    style="width: 50%; border-radius: 20px;  transition: background-color 2s ease;"
-                                    @click="submitVueForm">Gönder(Vue.js)</div>
-                            </div>
-                        </div>
+                        <div class="row-md-12 mt-5 mb-3 text-center">
 
-                        <div class="row text-center">
-                            <div class="col-md-12">
-                                <div id="jsSubmitButton" class=" container btn btn-outline-warning text-dark "
-                                    style="width: 50%; border-radius: 20px;  transition: background-color 2s ease; "
-                                    @click="FormGonder">Gönder(js)</div>
+                            <div class="container button  btn btn-outline-light text-dark " @click="submitVueForm">
+                                Gönder(Vue.js)
                             </div>
+
+                            <div id="jsSubmitButton" class=" button container btn btn-outline-warning text-dark  ml-3"
+                                @click="FormGonder">Gönder(js)
+                            </div>
+
+                        </div>
+                        <div class="row text-center mt-3">
+
+                            <div class="col-md-12">
+                                <button type="reset" class="btn btn-outline-danger  button">Temizle</button>
+                            </div>
+
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -208,215 +218,216 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-<script>
-     
-    new Vue({
-        el: '#app',
-        data: {
-            formData: {
-                Ad_SoyAd: '',
-                Email: '',
-                Cinsiyet: '',
-                Gun: '',
-                Ay: '',
-                Yil: '',
-                Konum_Mahalle: '',
-                Konum_Sokak: '',
-                Konum_Il: '',
-                Konum_Ilce: '',
-                Hakkinda: '',
-                Hobiler: [],
-                BosInputlar: [], // Diziyi tanımladık
-            }
-        },
-        methods: {
-            submitVueForm: function () {
-                // BosInputlar dizisini sıfırla
-                this.formData.BosInputlar = [];
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
 
-                if (this.formData.Ad_SoyAd === '') {
-                    alert("Adınızı doldurun.");
-                    this.formData.BosInputlar.push("Ad Soyad");
-                }
-                if (this.formData.Email === '') {
-                    alert("E-postanızı doldurun.");
-                    this.formData.BosInputlar.push("E-posta");
-                }
-                if (this.formData.Cinsiyet === '') {
-                    alert("Cinsiyetinizi seçin.");
-                    this.formData.BosInputlar.push("Cinsiyet");
-                }
-                if (this.formData.Gun === '' || this.formData.Ay === '' || this.formData.Yil === '') {
-                    alert("Doğum tarihinizi doldurun.");
-                    this.formData.BosInputlar.push("Doğum Tarihi");
-                }
-                if (this.formData.Konum_Mahalle === '' || this.formData.Konum_Sokak === '' || this.formData.Konum_Il === '' || this.formData.Konum_Ilce === '') {
-                    alert("Konum bilgilerinizi doldurun.");
-                    this.formData.BosInputlar.push("Konum");
-                }
-                if (this.formData.Hakkinda === '') {
-                    alert("Hakkında alanını doldurun.");
-                    this.formData.BosInputlar.push("Hakkında");
-                }
-                if (this.formData.Hobiler.length === 0) {
-                    alert("En az bir hobi seçin.");
-                    this.formData.BosInputlar.push("Hobi");
-                }
-                if (!this.EmailKontrol(this.formData.Email)) {
-                    alert("Geçerli bir e-posta adresi girin.");
-                    this.formData.BosInputlar.push("Geçerli E-posta");
-                }
-
-                if (this.formData.BosInputlar.length > 0) {
-                    alert("Form Gönderisi Başarısız(vue.js)");
-                } else {
-                    // Form doğru şekilde doldurulduğunda burası çalışır
-                    localStorage.setItem("formData", JSON.stringify(this.formData));
-                    alert("Form başarıyla gönderildi! (vue.js)");
-                    window.location.href = "iletisim_js.html";
+        new Vue({
+            el: '#app',
+            data: {
+                formData: {
+                    Ad_SoyAd: '',
+                    Email: '',
+                    Cinsiyet: '',
+                    Gun: '',
+                    Ay: '',
+                    Yil: '',
+                    Konum_Mahalle: '',
+                    Konum_Sokak: '',
+                    Konum_Il: '',
+                    Konum_Ilce: '',
+                    Hakkinda: '',
+                    Hobiler: [],
+                    BosInputlar: [], // Diziyi tanımladık
                 }
             },
+            methods: {
+                submitVueForm: function () {
+                    // BosInputlar dizisini sıfırla
+                    this.formData.BosInputlar = [];
 
-            EmailKontrol: function (email) {
-                var re = /\S+@\S+\.\S+/;
-                return re.test(email);
+                    if (this.formData.Ad_SoyAd === '') {
+                        alert("Adınızı doldurun.");
+                        this.formData.BosInputlar.push("Ad Soyad");
+                    }
+                    if (this.formData.Email === '') {
+                        alert("E-postanızı doldurun.");
+                        this.formData.BosInputlar.push("E-posta");
+                    }
+                    if (this.formData.Cinsiyet === '') {
+                        alert("Cinsiyetinizi seçin.");
+                        this.formData.BosInputlar.push("Cinsiyet");
+                    }
+                    if (this.formData.Gun === '' || this.formData.Ay === '' || this.formData.Yil === '') {
+                        alert("Doğum tarihinizi doldurun.");
+                        this.formData.BosInputlar.push("Doğum Tarihi");
+                    }
+                    if (this.formData.Konum_Mahalle === '' || this.formData.Konum_Sokak === '' || this.formData.Konum_Il === '' || this.formData.Konum_Ilce === '') {
+                        alert("Konum bilgilerinizi doldurun.");
+                        this.formData.BosInputlar.push("Konum");
+                    }
+                    if (this.formData.Hakkinda === '') {
+                        alert("Hakkında alanını doldurun.");
+                        this.formData.BosInputlar.push("Hakkında");
+                    }
+                    if (this.formData.Hobiler.length === 0) {
+                        alert("En az bir hobi seçin.");
+                        this.formData.BosInputlar.push("Hobi");
+                    }
+                    if (!this.EmailKontrol(this.formData.Email)) {
+                        alert("Geçerli bir e-posta adresi girin.");
+                        this.formData.BosInputlar.push("Geçerli E-posta");
+                    }
+
+                    if (this.formData.BosInputlar.length > 0) {
+                        alert("Form Gönderisi Başarısız(vue.js)");
+                    } else {
+                        // Form doğru şekilde doldurulduğunda burası çalışır
+                        localStorage.setItem("formData", JSON.stringify(this.formData));
+                        alert("Form başarıyla gönderildi! (vue.js)");
+                        window.location.href = "iletisim_js.html";
+                    }
+                },
+
+
+                EmailKontrol: function (email) {
+                    var re = /\S+@\S+\.\S+/;
+                    return re.test(email);
+                }
+            }
+        });
+        document.getElementById("jsSubmitButton").addEventListener("click", FormGonder);
+
+        function EmailKontrol(email) {
+            const kontrol = /^[a-zA-Z0-9.]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+            return kontrol.test(email);
+        }
+
+        function isEmpty(value) {
+            return value === null || value === undefined || value.trim() === "";
+        }
+
+        function FormGonder() {
+            var Ad_SoyAd = document.getElementById("Ad_SoyAd").value;
+            var Email = document.getElementById("Email").value;
+            var Konum_Il = document.getElementById("Il").value;
+            var Konum_Ilce = document.getElementById("Ilce").value;
+            var Konum_Sokak = document.getElementById("Sokak").value;
+            var Konum_Mahalle = document.getElementById("Mahalle").value;
+
+            var HobilerDeğer = document.querySelectorAll('input[type=checkbox]:checked');
+            var Hobiler = [];
+            HobilerDeğer.forEach(function (checkbox) {
+                Hobiler.push(checkbox.value);
+            });
+
+            var CinsiyetDegeri = document.querySelectorAll('input[type=radio]:checked');
+            var Cinsiyet;
+            if (CinsiyetDegeri.length > 0) {
+                Cinsiyet = CinsiyetDegeri[0].value;
+            }
+
+            var Gun = document.getElementById("Gun").value;
+            var Ay = document.getElementById('Ay').value;
+            var Yil = document.getElementById("Yil").value;
+
+            var Hakkında = document.getElementById("Hakkında").value;
+
+            var BosInputlar = [];
+
+            if (isEmpty(Ad_SoyAd)) {
+                BosInputlar.push("Ad Soyad");
+                alert("Adınızı doldurun.")
+            }
+            if (isEmpty(Email)) {
+                BosInputlar.push("Email");
+                alert("E-postanızı doldurun.")
+            }
+            if (isEmpty(Konum_Il)) {
+                BosInputlar.push("Konum İl");
+                alert("İl Doldurunuz")
+            }
+            if (isEmpty(Konum_Ilce)) {
+                BosInputlar.push("Konum İlçe");
+                alert("İlçe Doldurunuz")
+            }
+            if (isEmpty(Konum_Sokak)) {
+                BosInputlar.push("Konum Sokak");
+                alert("Sokak Doldurunuz")
+            }
+            if (isEmpty(Konum_Mahalle)) {
+                BosInputlar.push("Konum Mahalle");
+                alert("Mahalle Doldurunuz")
+            }
+            if (Hobiler.length === 0) {
+                BosInputlar.push("Hobiler");
+                alert("HEn az bir hobi seçin.")
+            }
+            if (isEmpty(Cinsiyet)) {
+                BosInputlar.push("Cinsiyet");
+                alert("Cinsiyetinizi seçin.")
+            }
+            if (isEmpty(Gun)) {
+                BosInputlar.push("Gün");
+                alert("Gün Doldurunuz")
+
+            }
+            if (isEmpty(Ay)) {
+                BosInputlar.push("Ay");
+                alert("Ay Doldurunuz")
+            }
+
+            if (Gun < 1 || Gun > 31) {
+                BosInputlar.push("Gün");
+                alert("Güne Geçerli Değerler Veriniz(1-31)");
+            }
+
+            if (isEmpty(Yil)) {
+                BosInputlar.push("Yıl");
+                alert("Yil Doldurunuz")
+            }
+
+            if (Yil > 2025 || Yil < 1899) {
+                BosInputlar.push("Yil");
+                alert("Yıla Geçerli Değerler Veriniz(1900-2024)");
+            }
+
+            if (isEmpty(Hakkında)) {
+                BosInputlar.push("Hakkında");
+                alert("Hakkında Doldurunuz")
+            }
+
+            if (BosInputlar.length > 0) {
+                alert("Form Gönderisi Başarısız(js)")
+            } else if (!EmailKontrol(Email)) {
+                alert("Geçerli bir e-posta adresi girin.");
+            } else {
+                localStorage.setItem("Ad_SoyAd", Ad_SoyAd);
+                localStorage.setItem("Email", Email);
+                localStorage.setItem("Konum_Il", Konum_Il);
+                localStorage.setItem("Konum_Ilce", Konum_Ilce);
+                localStorage.setItem("Konum_Sokak", Konum_Sokak);
+                localStorage.setItem("Konum_Mahalle", Konum_Mahalle);
+                localStorage.setItem("Hobiler", JSON.stringify(Hobiler));
+                localStorage.setItem("Cinsiyet", Cinsiyet);
+                localStorage.setItem("Gun", Gun);
+                localStorage.setItem("Ay", Ay);
+                localStorage.setItem("Yil", Yil);
+                localStorage.setItem("Hakkında", Hakkında);
+                alert("Form başarıyla gönderildi!(js)");
+                window.location.href = "iletisim_js.html";
             }
         }
-    });
-    document.getElementById("jsSubmitButton").addEventListener("click", FormGonder);
-
-function EmailKontrol(email) {
-    const kontrol = /^[a-zA-Z0-9.]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
-    return kontrol.test(email);
-}
-
-function isEmpty(value) {
-    return value === null || value === undefined || value.trim() === "";
-}
-
-function FormGonder() {
-    var Ad_SoyAd = document.getElementById("Ad_SoyAd").value;
-    var Email = document.getElementById("Email").value;
-    var Konum_Il = document.getElementById("Il").value;
-    var Konum_Ilce = document.getElementById("Ilce").value;
-    var Konum_Sokak = document.getElementById("Sokak").value;
-    var Konum_Mahalle = document.getElementById("Mahalle").value;
-
-    var HobilerDeğer = document.querySelectorAll('input[type=checkbox]:checked');
-    var Hobiler = [];
-    HobilerDeğer.forEach(function (checkbox) {
-        Hobiler.push(checkbox.value);
-    });
-
-    var CinsiyetDegeri = document.querySelectorAll('input[type=radio]:checked');
-    var Cinsiyet;
-    if (CinsiyetDegeri.length > 0) {
-        Cinsiyet = CinsiyetDegeri[0].value;
-    }
-
-    var Gun = document.getElementById("Gun").value;
-    var Ay = document.getElementById('Ay').value;
-    var Yil = document.getElementById("Yil").value;
-
-    var Hakkında = document.getElementById("Hakkında").value;
-
-    var BosInputlar = [];
-
-    if (isEmpty(Ad_SoyAd)) {
-        BosInputlar.push("Ad Soyad");
-        alert("Adınızı doldurun.")
-    }
-    if (isEmpty(Email)) {
-        BosInputlar.push("Email");
-        alert("E-postanızı doldurun.")
-    }
-    if (isEmpty(Konum_Il)) {
-        BosInputlar.push("Konum İl");
-        alert("İl Doldurunuz")
-    }
-    if (isEmpty(Konum_Ilce)) {
-        BosInputlar.push("Konum İlçe");
-        alert("İlçe Doldurunuz")
-    }
-    if (isEmpty(Konum_Sokak)) {
-        BosInputlar.push("Konum Sokak");
-        alert("Sokak Doldurunuz")
-    }
-    if (isEmpty(Konum_Mahalle)) {
-        BosInputlar.push("Konum Mahalle");
-        alert("Mahalle Doldurunuz")
-    }
-    if (Hobiler.length === 0) {
-        BosInputlar.push("Hobiler");
-        alert("HEn az bir hobi seçin.")
-    }
-    if (isEmpty(Cinsiyet)) {
-        BosInputlar.push("Cinsiyet");
-        alert("Cinsiyetinizi seçin.")
-    }
-    if (isEmpty(Gun)) {
-        BosInputlar.push("Gün");
-        alert("Gün Doldurunuz")
-
-    }
-    if (isEmpty(Ay)) {
-        BosInputlar.push("Ay");
-        alert("Ay Doldurunuz")
-    }
-
-    if (Gun < 1 || Gun > 31) {
-        BosInputlar.push("Gün");
-        alert("Güne Geçerli Değerler Veriniz(1-31)");
-    }
-
-    if (isEmpty(Yil)) {
-        BosInputlar.push("Yıl");
-        alert("Yil Doldurunuz")
-    }
-
-    if (Yil > 2025 || Yil < 1899) {
-        BosInputlar.push("Yil");
-        alert("Yıla Geçerli Değerler Veriniz(1900-2024)");
-    }
-
-    if (isEmpty(Hakkında)) {
-        BosInputlar.push("Hakkında");
-        alert("Hakkında Doldurunuz")
-    }
-
-    if (BosInputlar.length > 0) {
-        alert("Form Gönderisi Başarısız(js)")
-    } else if (!EmailKontrol(Email)) {
-        alert("Geçerli bir e-posta adresi girin.");
-    } else {
-        localStorage.setItem("Ad_SoyAd", Ad_SoyAd);
-        localStorage.setItem("Email", Email);
-        localStorage.setItem("Konum_Il", Konum_Il);
-        localStorage.setItem("Konum_Ilce", Konum_Ilce);
-        localStorage.setItem("Konum_Sokak", Konum_Sokak);
-        localStorage.setItem("Konum_Mahalle", Konum_Mahalle);
-        localStorage.setItem("Hobiler", JSON.stringify(Hobiler));
-        localStorage.setItem("Cinsiyet", Cinsiyet);
-        localStorage.setItem("Gun", Gun);
-        localStorage.setItem("Ay", Ay);
-        localStorage.setItem("Yil", Yil);
-        localStorage.setItem("Hakkında", Hakkında);
-        alert("Form başarıyla gönderildi!(js)");
-        window.location.href = "iletisim_js.html";
-    }
-}
 
 
 
-    
-</script>
+
+    </script>
 
 
 
-  
 
-   
+
+
 
 
 </body>

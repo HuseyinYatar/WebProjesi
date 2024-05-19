@@ -30,14 +30,21 @@ body {
 }
 
 .navbar-brand:hover .hakkinda-link {
-   font-weight: bold
+   font-weight: 400
 }
 
 /*NavBardaki Linkler*/
 .nav-item a {
-   transition: color 1s ease;
+   transition: color 3s ease;
    font-size: 20px;
 }
+
+.NavbarButon
+{
+   transition: color 3s ease;
+   border-radius: 25px;
+}
+
 
 
 a.İlceler {
@@ -75,6 +82,7 @@ ul li a:hover {
    padding: 0;
 }
 
+
 /*Mirasımız Sayfası Kart Fontu*/
 .CardOzel {
    font-family: "Oswald", sans-serif;
@@ -97,17 +105,11 @@ ul li a:hover {
    width: 50%;
 }
 
-
-
-
-
 /*Giris Yap Html*/
 
-
 .Girisyap {
-   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);  
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
    margin-top: 200px;
-   width: 24%;
    padding: 50px;
    border-radius: 25px;
    background-color: rgb(92, 137, 219);
@@ -122,7 +124,8 @@ ul li a:hover {
 
 .GirisyapButton {
    width: 100%;
-   transition: background-color 1s ease;
+   border-radius: 25px;
+   transition: background-color 3s ease;
 }
 
 .GirisyapButton:hover {
@@ -132,46 +135,92 @@ ul li a:hover {
 
 
 /*İletisim Formu Stilleri*/
-.iletisim_Container{
-   background-color: rgb(104, 149, 232); border-radius:50px; width: 50%; margin-top: 1%;
+.iletisim_Container {
+   background-color: rgb(104, 149, 232);
+   border-radius: 50px;
+   width: 50%;
+   margin-top: 1%;
 }
+
 .iletisim label {
    font-size: 25px;
    font-weight: 400;
 }
-
-.iletisim button{
-   transition: background-color 1s ease;
-   color:white;
-   width:50%;
-   border-radius: 20px;
+@media (max-width: 768px) {
+   #Hakkında {
+       width: 100%;
+   }
 }
-.iletisim button:hover{
+
+.iletisim .button {
+   width: 40%;
+   border-radius: 20px;
+   transition: background-color 2s ease;
+}
+
+.iletisim button:hover {
    color: white;
- 
+
 }
 
 
 /*İletisim_js*/
 
-.iletisim_js_Container .col-md-3 label{
-   font-size:25px ;
-font-weight: 400;
-}
-.iletisim_js_Container .col-md-6 label{
-   font-size:25px ;
-font-weight: 400;
+.iletisim_js_Container .col-md-3,
+.col-md-4 label {
+   font-size: 25px;
+   font-weight: 400;
 }
 
-.iletisim_js_Container .col-md-9 label{
+.iletisim_js_Container .col-md-6 label {
+   font-size: 25px;
+   font-weight: 400;
+}
+
+.iletisim_js_Container .col-md-9 label {
    font-size: 20px;
    font-weight: 350;
 }
-.iletisim_js_Container{
+
+.iletisim_js_Container .col-md-8 label {
+   font-size: 20px;
+   font-weight: 400;
+}
+
+.iletisim_js_Container {
    background-color: rgb(148, 182, 243);
    padding: 50px;
    border-radius: 25px;
    margin-top: 2%;
-   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);   
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 
+}
+
+
+
+
+
+/*İlgi Alanlarım Sayfaı*/
+
+.Arama_Kutusu input {
+   border-radius: 20px;
+   padding: 10px;
+   padding-left: 20px;
+   border: none;
+   outline: none;
+   font-size: 20px;
+
+
+}
+
+.Ozel_Buton {
+   color: black;
+   font-size: 20px;
+   border-radius: 20px;
+   transition: background-color 3s ease;
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.Ozel_Buton:hover {
+   color: white;
 }
